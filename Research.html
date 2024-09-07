@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research</title>
+    <style>
+        @font-face {
+            font-family: 'Fontin';
+            src: url('Fontin-Regular.otf') format('opentype');
+        }
+
+        body {
+            font-family: 'Fontin', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: white;
+        }
+
+        header, footer {
+            background-color: #5777f6e8;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        header h1 {
+            padding: 20px;
+            margin: 20px 0;
+            line-height: 1.2;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1, h2, h3 {
+            color: black;
+            margin: 0;
+        }
+
+        .publication-list, .custom-list {
+            list-style-type: none;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .publication-list li, .custom-list li {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .publication-list a, .custom-list a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        .publication-list a:hover, .custom-list a:hover {
+            text-decoration: underline;
+        }
+
+        .abstract-content {
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #cee4f8;
+            color: black;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-align: justify;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .paper-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #5777f6e8;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            nav a {
+                float: none;
+                text-align: center;
+                padding: 10px;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            .paper-image {
+                max-width: 100%;
+            }
+
+            .abstract-content {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            nav a {
+                padding: 8px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .custom-list li, .abstract-content {
+                font-size: 14px;
+            }
+
+            .paper-image {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Research & Policy</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Research.html">Research & Policy</a>
+        <a href="Teaching.html">Teaching</a>
+    </nav>
+
+    <main>
+        <section id="research">
+            <h2>Job Market Paper</h2>
+            <ul class="custom-list">
+                <li><strong>“The Italian North-South Divide: Market Design for Balanced Teacher Reassignment”</strong> [Draft coming soon]</li>
+            </ul>
+
+            <h2>Working Papers</h2>
+            <ul class="custom-list">
+                <li><strong>“When Geography Shapes Preferences: Redesigning Teacher Assignment in Italy”</strong>, with 
+                    <a href="https://www.battaldogan.com/" target="_blank">Battal Dogan</a>. 
+                    <a href="ssrn-version.pdf" target="_blank">[PDF]</a> 
+                    <ul>
+                        <li><span style="color: blue;">“Best Paper Award” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
+                        <li><span style="color: blue;">“Exemplary Track Paper Award in Applied Modeling” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
+                        <li>Proceedings of the 25th ACM Conference on Economics and Computation (2024)</li>
+                    </ul>
+                    <div class="abstract-content">
+                        <p>We investigate Italy’s centralized teacher assignment system where teachers can
+                            rank “geographical regions”, leading to ties in their rank order lists (ROLs). We show
+                            that the way ties in teachers’ ROLs are resolved in the current assignment mechanism
+                            systematically violates teachers’ priority rights and results in justified envy. We propose
+                            a new mechanism, Deferred Acceptance with Hierarchical Choice (DA-HC), which is
+                            strategy-proof, eliminates justified envy, and Pareto improves over the benchmark deferred
+                            acceptance mechanism with simple tie-breaking (DA-STB). Using administrative data,
+                            we provide evidence that DA-HC can potentially bring significant welfare improvements
+                            over the benchmark DA-STB.</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="download (9).png" alt="Paper Image" class="paper-image"> 
+                    </div>
+                </li>
+            </ul>
+
+            <h2>Work in Progress</h2>
+            <ul class="custom-list">
+                <li><strong>“Modifying school choice for more equitable outcomes in England”</strong> with 
+                <a href="https://simonburgesseconomics.co.uk/" target="_blank">Simon Burgess</a>, 
+                <a href="https://ecantill.ulb.be/" target="_blank">Estelle Cantillon</a>, and
+                <a href="https://sites.google.com/view/ellengreaves/" target="_blank">Ellen Greaves</a>. [Draft coming soon]</li>
+                <li><strong>“Age at School Entry: What Do We Know So Far?”</strong>, with 
+                    <a href="https://www.utsc.utoronto.ca/people/dhuey/" target="_blank">Elizabeth Dhuey</a>, 
+                    <a href="https://sites.google.com/site/lucafumarco/home" target="_blank">Luca Fumarco</a>, 
+                    <a href="https://be.linkedin.com/in/levihalewyck" target="_blank">Levi Halewyck</a>, 
+                    <a href="https://sites.google.com/view/simontermeulen/home" target="_blank">Simon ter Meulen</a>. 
+                    [Draft coming soon]
+                </li>
+                <div class="image-container">
+                    <!-- <img src="FigTwo.png" alt="Paper Image" class="paper-image">  -->
+                </div>
+                <li><strong>“<em>Choosing in the Dark</em>. Information Revelation and Teacher Distribution”.</strong> [Draft coming soon]</li>
+                <div class="image-container">
+                    <!-- <img src="Graph_combined_last1 (2).png" alt="Paper Image" class="paper-image">  -->
+                </div>
+                <li><strong>“Market Design for Retention Policies in Dynamic Teacher Reassignment”.</strong> [Draft coming soon]</li>
+                <div class="image-container">
+                    <!-- <img src="newplot (1).png" alt="Paper Image" class="paper-image">  -->
+                </div>
+            </ul>
+
+            <h2>Policy Writing</h2>
+            <ul class="custom-list">
+                <li><strong>“School Admissions in England: The Rules Schools Choose on Which Pupils to Admit” (2023)</strong>, with 
+                    <a href="https://simonburgesseconomics.co.uk/" target="_blank">Simon Burgess</a>, 
+                    <a href="https://ecantill.ulb.be/" target="_blank">Estelle Cantillon</a>, 
+                    <a href="https://sites.google.com/view/ellengreaves/" target="_blank">Ellen Greaves</a>, 
+                    <a href="https://www.westminster.ac.uk/about-us/our-people/directory/zhang-min" target="_blank">Min Zhang</a>. 
+                    <a href="admissioncriteria.pdf" target="_blank">Policy Report [PDF] <a href="https://economics.blogs.bristol.ac.uk/2023/03/01/who-gets-in-where-you-live-matters-for-where-you-go-to-school/" target="_blank">[Economics Blog]</a></a>
+                    <div class="abstract-content">
+                        <p>Most secondary schools in England are able to design the rules for which pupils
+                            have priority when the school is over-subscribed. 
+                            This could be positive or negative for inclusivity, depending on schools’ choices. 
+                            In this context, we study the detailed rules for each secondary school in England. 
+                            Our main findings are that, first, geography (still) determines admission to most 
+                            over-subscribed schools. This matters for social mobility, as some households 
+                            are priced out of high performing schools due to higher property prices around 
+                            the school.Second, despite explicit financial incentives, only a small minority 
+                            of schools give priority to pupils eligible for the Pupil Premium, and this
+                            priority is meaningful only in a few dozen schools. Third, the few schools 
+                            with ‘innovative’ admissions arrangements could inspire other schools to implement 
+                            feasible ‘tried and tested’ reforms. Free schools appear to be leading
+                            these ‘innovative’ admissions arrangements. Finally, in the complex system of 
+                            multiple school types and diverse admissions arrangements, parents in some areas
+                            lack the required information to make informed school choices.</p>
+                    </div> 
+                    <div class="image-container">
+                        <img src="5. combine_priorities_2.png" alt="Paper Image" class="paper-image"> 
+                    </div>
+                    <!-- <span style="color: blue;">In the news: </span></h2> <a href="https://economics.blogs.bristol.ac.uk/2023/03/01/who-gets-in-where-you-live-matters-for-where-you-go-to-school/" target="_blank">Economics Blog</a> -->
+                </li>
+            </ul>
+
+            <h2>Publications</h2>
+            <ul class="custom-list">
+                <li><strong>“Lost in Translation: Reading and Math Performance of Second-Generation Immigrant Children in Italy”</strong>, 
+                    with <span style="color: #3c42f3;">Giuseppe Russo</span>, 
+                    Journal of Human Capital, <em>Accepted.</em> 
+                    <a href="LIT.pdf" target="_blank">[PDF]</a>
+                    <div class="abstract-content">
+                        <p>This paper explores the effect of language proficiency on Math achievement for ten-year-old
+                            second-generation immigrant children in Italian primary schools. Especially for these children, proficiency
+                            in the host country language is the prerequisite for the acquisition of any other skill. However, using an
+                            instrumental variable strategy that exploits the heterogeneity in birth dates and the variation in linguistic
+                            distances, we find that they face a trade-off between learning Italian and learning Math. The linguistic
+                            literature offers an explanation based on the existence of a language proficiency threshold that must be
+                            crossed to understand the classes. On this basis, we develop a simple model of skill production that provides
+                            theoretical foundations for our results and a unified framework for interpreting the mixed findings in the
+                            literature. We present empirical evidence that the trade-off arises when proficiency is below the threshold
+                            commonly adopted to indicate a sufficient command of the Italian language, which happens for 59% of
+                            our sample. Enabling these children to catch up requires substantial investments in education since, when
+                            a sufficiency threshold must be crossed, marginal improvements are ineffective, rendering the proficiency
+                            gap permanent and fostering social exclusion and inequality.</p>
+                    </div> 
+                    <div class="image-container">
+                        <img src="Table_image.png" alt="Paper Image" class="paper-image"> 
+                    </div>
+                </li>
+            </ul>
+        </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mariagrazia Cavallo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
