@@ -32,11 +32,11 @@
             margin: 10px 0;
             line-height: 1.2;
         }
-
         nav {
             background-color: #333;
             overflow: hidden;
         }
+        
 
         nav a {
             float: left;
@@ -94,16 +94,31 @@
         }
 
         .image-container {
-            text-align: center;
-            margin-top: 20px;
+            display: flex; /* Ensures images are aligned side by side */
+            justify-content: center; /* Center images in the container */
+            gap: 40px; /* Adjust the space between images */
         }
 
         .paper-image {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
+            width: 100%; /* Allow images to take full width of the container */
+            max-width: 250px; /* Set maximum width for larger screens */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Prevent images from being cropped */
             border: 1px solid #ddd;
             border-radius: 5px;
+        }
+        
+        /* On mobile screens (480px or smaller) */
+        @media (max-width: 480px) {
+            .image-container {
+                flex-direction: column; /* Stack images vertically */
+                gap: 20px; /* Reduce the gap for smaller screens */
+            }
+        
+            .paper-image {
+                max-width: 90%; /* Reduce image width on small screens */
+                margin: 0 auto; /* Center images on smaller screens */
+            }
         }
 
         h2 {
@@ -159,6 +174,7 @@
 </head>
 <body>
     <header>
+
         <h1>Research & Policy</h1>
     </header>
     <nav>
@@ -179,14 +195,12 @@
                 <li><strong>“When Geography Shapes Preferences: Redesigning Teacher Assignment in Italy”</strong>, with 
                     <a href="https://www.battaldogan.com/" target="_blank">Battal Dogan</a>. 
                     <a href="ssrn-version.pdf" target="_blank">[PDF]</a> 
-                    <br><br>
                     <ul>
                         <li><span style="color: blue;">“Best Paper Award” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
                         <li><span style="color: blue;">“Exemplary Track Paper Award in Applied Modeling” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
                         <li>Proceedings of the 25th ACM Conference on Economics and Computation (2024)</li>
                     </ul>
                     <div class="abstract-content">
-                         <span style="color: #3c42f3;">Abstract</span>
                         <p>We investigate Italy’s centralized teacher assignment system where teachers can
                             rank “geographical regions”, leading to ties in their rank order lists (ROLs). We show
                             that the way ties in teachers’ ROLs are resolved in the current assignment mechanism
@@ -198,7 +212,9 @@
                             over the benchmark DA-STB.</p>
                     </div>
                     <div class="image-container">
+                        <img src="Graph.png" alt="Paper Image" class="paper-image"> 
                         <img src="download (9).png" alt="Paper Image" class="paper-image"> 
+                        <img src="combined_ROL_2019_all.jpg" alt="Paper Image" class="paper-image"> 
                     </div>
                 </li>
             </ul>
@@ -238,7 +254,6 @@
                     <a href="https://www.westminster.ac.uk/about-us/our-people/directory/zhang-min" target="_blank">Min Zhang</a>. 
                     <a href="admissioncriteria.pdf" target="_blank">Policy Report [PDF] <a href="https://economics.blogs.bristol.ac.uk/2023/03/01/who-gets-in-where-you-live-matters-for-where-you-go-to-school/" target="_blank">[Economics Blog]</a></a>
                     <div class="abstract-content">
-                         <span style="color: #3c42f3;">Abstract</span>
                         <p>Most secondary schools in England are able to design the rules for which pupils
                             have priority when the school is over-subscribed. 
                             This could be positive or negative for inclusivity, depending on schools’ choices. 
@@ -256,20 +271,22 @@
                             lack the required information to make informed school choices.</p>
                     </div> 
                     <div class="image-container">
+                        <img src="5. Map of England_p_oversubscribed.png" alt="Paper Image" class="paper-image"> 
                         <img src="5. combine_priorities_2.png" alt="Paper Image" class="paper-image"> 
+                        <img src="5. combine_priorities_3.png" alt="Paper Image" class="paper-image"> 
                     </div>
-                    
+                    <!-- <span style="color: blue;">In the news: </span></h2> <a href="https://economics.blogs.bristol.ac.uk/2023/03/01/who-gets-in-where-you-live-matters-for-where-you-go-to-school/" target="_blank">Economics Blog</a> -->
                 </li>
             </ul>
 
             <h2>Publications</h2>
             <ul class="custom-list">
                 <li><strong>“Lost in Translation: Reading and Math Performance of Second-Generation Immigrant Children in Italy”</strong>, 
-                    with <span style="color: #004080;">Giuseppe Russo</span>, 
+                    with <span style="color: #3c42f3;">Giuseppe Russo</span>, 
                     Journal of Human Capital, <em>Accepted.</em> 
-                    <a href="LIT.pdf" target="_blank">[PDF (WP version)]</a>
+                    <a href="LIT.pdf" target="_blank">[PDF]</a>
                     <div class="abstract-content">
-                         <span style="color: #3c42f3;">Abstract</span>
+                        <span style="color: #3c42f3;">Abstract</span>
                         <p>This paper explores the effect of language proficiency on Math achievement for ten-year-old
                             second-generation immigrant children in Italian primary schools. Especially for these children, proficiency
                             in the host country language is the prerequisite for the acquisition of any other skill. However, using an
@@ -284,6 +301,10 @@
                             a sufficiency threshold must be crossed, marginal improvements are ineffective, rendering the proficiency
                             gap permanent and fostering social exclusion and inequality.</p>
                     </div> 
+                   <!--  <div class="image-container">
+                        <img src="Table_image.png" alt="Paper Image" class="paper-image"> 
+                    </div>-->
+
                 </li>
             </ul>
         </section>
