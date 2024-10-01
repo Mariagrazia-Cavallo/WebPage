@@ -170,7 +170,21 @@
                 max-width: 90%;
             }
         }
+        /* Ensure that all hidden text sections are initially hidden */
+        .hiddenText {
+            display: none; /* This hides the text initially */
+        }
     </style>
+    <script>
+            function toggleText(id) {
+                var text = document.getElementById(id);
+                if (text.style.display === "none") {
+                    text.style.display = "block"; // Show the text
+                } else {
+                    text.style.display = "none"; // Hide the text
+                }
+            }
+        </script>
 </head>
 <body>
     <header>
@@ -195,15 +209,11 @@
                 <li><strong>“When Geography Shapes Preferences: Redesigning Teacher Assignment in Italy”</strong>, with 
                     <a href="https://www.battaldogan.com/" target="_blank">Battal Dogan</a>. 
                     <a href="ssrn-version.pdf" target="_blank">[PDF]</a> 
-                    <ul>
-                         <br>
-                        <li><span style="color: blue;">“Best Paper Award” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
-                        <li><span style="color: blue;">“Exemplary Track Paper Award in Applied Modeling” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
-                        <li>Proceedings of the 25th ACM Conference on Economics and Computation (2024)</li>
-                    </ul>
-                    <div class="abstract-content">
-                        <span style="color: #3c42f3;">Abstract</span>
-                        <p>We investigate Italy’s centralized teacher assignment system where teachers can
+                    <br>
+                    <button onclick="toggleText('abstract1')">+ Abstract</button>
+                    <div id="abstract1" class="hiddenText">
+                        <div class="abstract-content">
+                            We investigate Italy’s centralized teacher assignment system where teachers can
                             rank “geographical regions”, leading to ties in their rank order lists (ROLs). We show
                             that the way ties in teachers’ ROLs are resolved in the current assignment mechanism
                             systematically violates teachers’ priority rights and results in justified envy. We propose
@@ -211,8 +221,16 @@
                             strategy-proof, eliminates justified envy, and Pareto improves over the benchmark deferred
                             acceptance mechanism with simple tie-breaking (DA-STB). Using administrative data,
                             we provide evidence that DA-HC can potentially bring significant welfare improvements
-                            over the benchmark DA-STB.</p>
+                            over the benchmark DA-STB.
+                        </div>
                     </div>
+                    <ul>
+                         <br>
+                        <li><span style="color: blue;">“Best Paper Award” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
+                        <li><span style="color: blue;">“Exemplary Track Paper Award in Applied Modeling” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
+                        <li>Proceedings of the 25th ACM Conference on Economics and Computation (2024)</li>
+                    </ul>
+                    
                      <!--    <div class="image-container">
                         <img src="Graph.png" alt="Paper Image" class="paper-image"> 
                         <img src="download (9).png" alt="Paper Image" class="paper-image"> 
@@ -255,24 +273,27 @@
                     <a href="https://sites.google.com/view/ellengreaves/" target="_blank">Ellen Greaves</a>, 
                     <a href="https://www.westminster.ac.uk/about-us/our-people/directory/zhang-min" target="_blank">Min Zhang</a>. 
                     <a href="admissioncriteria.pdf" target="_blank">Policy Report [PDF] <a href="https://economics.blogs.bristol.ac.uk/2023/03/01/who-gets-in-where-you-live-matters-for-where-you-go-to-school/" target="_blank">[Economics Blog]</a></a>
-                    <div class="abstract-content">
-                        <span style="color: #3c42f3;">Abstract</span>
-                        <p>Most secondary schools in England are able to design the rules for which pupils
+                    <br>
+                    <button onclick="toggleText('abstract2')">+ Abstract</button>
+                    <div id="abstract2" class="hiddenText">
+                        <div class="abstract-content">
+                            Most secondary schools in England are able to design the rules for which pupils
                             have priority when the school is over-subscribed. 
                             This could be positive or negative for inclusivity, depending on schools’ choices. 
                             In this context, we study the detailed rules for each secondary school in England. 
                             Our main findings are that, first, geography (still) determines admission to most 
                             over-subscribed schools. This matters for social mobility, as some households 
                             are priced out of high performing schools due to higher property prices around 
-                            the school.Second, despite explicit financial incentives, only a small minority 
+                            the school. Second, despite explicit financial incentives, only a small minority 
                             of schools give priority to pupils eligible for the Pupil Premium, and this
                             priority is meaningful only in a few dozen schools. Third, the few schools 
                             with ‘innovative’ admissions arrangements could inspire other schools to implement 
                             feasible ‘tried and tested’ reforms. Free schools appear to be leading
                             these ‘innovative’ admissions arrangements. Finally, in the complex system of 
                             multiple school types and diverse admissions arrangements, parents in some areas
-                            lack the required information to make informed school choices.</p>
-                    </div> 
+                            lack the required information to make informed school choices.
+                        </div>
+                    </div>
                        <!--    <div class="image-container">
                         <img src="5. Map of England_p_oversubscribed.png" alt="Paper Image" class="paper-image"> 
                         <img src="5. combine_priorities_2.png" alt="Paper Image" class="paper-image"> 
@@ -288,22 +309,25 @@
                     with <span style="color: #004080;">Giuseppe Russo</span>, 
                     Journal of Human Capital, <em>Accepted.</em> 
                     <a href="LIT.pdf" target="_blank">[PDF (WP Version)]</a>
-                    <div class="abstract-content">
-                        <span style="color: #3c42f3;">Abstract</span>
-                        <p>This paper explores the effect of language proficiency on Math achievement for ten-year-old
-                            second-generation immigrant children in Italian primary schools. Especially for these children, proficiency
-                            in the host country language is the prerequisite for the acquisition of any other skill. However, using an
-                            instrumental variable strategy that exploits the heterogeneity in birth dates and the variation in linguistic
-                            distances, we find that they face a trade-off between learning Italian and learning Math. The linguistic
-                            literature offers an explanation based on the existence of a language proficiency threshold that must be
-                            crossed to understand the classes. On this basis, we develop a simple model of skill production that provides
-                            theoretical foundations for our results and a unified framework for interpreting the mixed findings in the
-                            literature. We present empirical evidence that the trade-off arises when proficiency is below the threshold
-                            commonly adopted to indicate a sufficient command of the Italian language, which happens for 59% of
-                            our sample. Enabling these children to catch up requires substantial investments in education since, when
-                            a sufficiency threshold must be crossed, marginal improvements are ineffective, rendering the proficiency
-                            gap permanent and fostering social exclusion and inequality.</p>
-                    </div> 
+                    <br>
+                    <button onclick="toggleText('abstract3')">+ Abstract</button>
+                    <div id="abstract3" class="hiddenText">
+                        <div class="abstract-content">
+                            This paper explores the effect of language proficiency on Math achievement for ten-year-old
+                second-generation immigrant children in Italian primary schools. Especially for these children, proficiency
+                in the host country language is the prerequisite for the acquisition of any other skill. However, using an
+                instrumental variable strategy that exploits the heterogeneity in birth dates and the variation in linguistic
+                distances, we find that they face a trade-off between learning Italian and learning Math. The linguistic
+                literature offers an explanation based on the existence of a language proficiency threshold that must be
+                crossed to understand the classes. On this basis, we develop a simple model of skill production that provides
+                theoretical foundations for our results and a unified framework for interpreting the mixed findings in the
+                literature. We present empirical evidence that the trade-off arises when proficiency is below the threshold
+                commonly adopted to indicate a sufficient command of the Italian language, which happens for 59% of
+                our sample. Enabling these children to catch up requires substantial investments in education since, when
+                a sufficiency threshold must be crossed, marginal improvements are ineffective, rendering the proficiency
+                gap permanent and fostering social exclusion and inequality.
+                        </div>
+                    </div>
                    <!--  <div class="image-container">
                         <img src="Table_image.png" alt="Paper Image" class="paper-image"> 
                     </div>-->
