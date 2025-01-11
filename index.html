@@ -11,7 +11,7 @@
             font-family: 'Fontin';
             src: url('Fontin-Regular.otf') format('opentype');
         }
-
+        
         body {
             font-size: 16px;
             font-family: 'Fontin', Arial, sans-serif;
@@ -20,23 +20,28 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: white;
+            background-color:#001f3f;
+            color: white; 
+        }
+        a {
+            color: rgb(255, 0, 162);
         }
         
         header, footer {
-            background-color: #5777f6e8;
+            background-color: #001f3f;
             color: white;
             text-align: center;
             padding: 1em 0;
         }
 
         nav {
-            background-color: #333;
+            text-align: center;
+            background-color:  #001f3f;
             overflow: hidden;
         }
 
         nav a {
-            float: right;
+            float: center;
             display: block;
             color: white;
             text-align: center;
@@ -52,7 +57,8 @@
         main {
             flex: 1;
             padding: 20px;
-            background-color: white;
+            background-color:#001f3f;
+            
             display: flex;
             justify-content: center;
         }
@@ -89,11 +95,11 @@
         }
 
         h1, h2, h3 {
-            color: #333;
+            color: white
         }
 
         .footer {
-            background-color: #5777f6e8;
+            background-color: #001f3f;
             color: white;
             text-align: center;
             padding: 10px;
@@ -154,8 +160,8 @@
     </header>
 
     <nav aria-label="Main navigation">
-        <a href="Teaching.html">Teaching</a>
         <a href="Research.html">Research & Policy</a>
+        <a href="Teaching.html">Teaching</a>
     </nav>
 
     <main>
@@ -163,24 +169,25 @@
             <div class="profile-section">
                 <img src="profile-photo.jpg" alt="Profile photo of Mariagrazia Cavallo, PhD candidate in Economics" class="profile-photo">
                 <div class="cv-email-container">
-                   My CV is available <a href="Curriculum_Vitae_Mariagrazia_Cavallo_2.pdf" target="_blank">here</a>.</p> 
-                    <p>Email: <a href="mailto:mariagrazia.cavallo@bristol.ac.uk">mariagrazia.cavallo@bristol.ac.uk</a></p>
+                    Ph.D. in Economics, <a href="https://www.bristol.ac.uk/economics/" target="_blank"><span style="color: rgb(255, 0, 162);">University of Bristol</span></a></p> 
+                   My CV is available <a href="Curriculum_Vitae_Mariagrazia_Cavallo_2.pdf" target="_blank"><span style="color: rgb(255, 0, 162);">here</span></a>.</p> 
+                   <p>Email: <a href="mailto:mariagrazia.cavallo@bristol.ac.uk"><span style="color: rgb(255, 0, 162);">mariagrazia.cavallo@bristol.ac.uk</span></a></p>
                 </div>
             </div>
 
             <div class="about-content">
-                <h2><span style="color: blue;">Hello, World!</span></h2>
+                <h2><span style="color:  rgb(6, 245, 129);">Hello, World!</span></h2>
                 <p>
                     
-                    My research interests lie in <span style="color: blue;">Economics of Education</span>, <span style="color: blue;">Market Design</span>, 
-                    and <span style="color: blue;">Computational Methods</span>.
+                    I am an applied microeconomist. My research interests lie in <span style="color: rgb(6, 245, 129);">Economics of Education</span>, <span style="color: rgb(6, 245, 129);">Market Design</span>, 
+                    and <span style="color: rgb(6, 245, 129);">Computational Methods</span>.
                     <br><br>
-                    My recent research focuses on educational matching markets, such as <strong>teacher assignment in Italy</strong> and <strong>school choice in England</strong>.
+                    My recent research focuses on educational matching markets, such as <strong><span style="color:  rgb(6, 245, 129);">teacher assignment in Italy</span></strong> and <strong><span style="color:  rgb(6, 245, 129);">school choice in England</span></strong>.
                     <br><br>
-                    In my work I like <strong>integrating theoretical insights with empirical methods </strong> drawn from applied microeconomics, structural econometrics, and machine learning to provide insights into how policies can be structured to create fair and efficient markets.
+                    In my work I like <strong><span style="color:  rgb(6, 245, 129);">integrating theoretical insights with empirical methods</span> </strong> drawn from applied microeconomics, structural econometrics, and machine learning to provide insights into how policies can be structured to create fair and efficient markets.
                 </p>
 
-                <img src="wordcloud.png" alt="Research paper by MC" class="paper-image">
+                <img src="output6.png" alt="Research interests" class="paper-image"> 
             </div>
         </div>
     </main>
@@ -194,7 +201,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Mariagrazia Cavallo",
-      "jobTitle": "PhD Candidate in Economics",
+      "jobTitle": "PhD in Economics",
       "affiliation": {
         "@type": "Organization",
         "name": "University of Bristol"
