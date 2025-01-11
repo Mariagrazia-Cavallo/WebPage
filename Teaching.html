@@ -10,28 +10,41 @@
             src: url('Fontin-Regular.otf') format('opentype');
         }
         body {
+            font-size: 16px;
             font-family: 'Fontin', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color:#001f3f;
+            color: white; 
+        }
+        a {
+            color: rgb(255, 0, 162);
         }
         header, footer {
-            background-color:  #5777f6e8;
+            background-color: #001f3f;
             color: white;
             text-align: center;
             padding: 1em 0;
         }
+
         nav {
-            background-color: #333;
+            text-align: center;
+            background-color:  #001f3f;
             overflow: hidden;
         }
+
         nav a {
-            float: left;
+            float: center;
             display: block;
             color: white;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
         }
+
         nav a:hover {
             background-color: #ddd;
             color: black;
@@ -40,10 +53,10 @@
             padding: 20px;
         }
         h1, h2, h3 {
-            color: black;
+            color: white;
         }
         ul.custom-list {
-            list-style-type: circle; /* Changes the marker to a square */
+            list-style-type: square; /* Changes the marker to a square */
         }
         ul.custom-list li {
             margin: 10px 0; /* Adds space between list items */
@@ -60,12 +73,12 @@
             flex: 1;
             padding: 20px;
             /* Add a background color for visibility (optional) */
-            background-color: #f4f4f4;
+            background-color:#001f3f;
         }
 
         /* Footer styling */
         .footer {
-            background-color:   #5777f6e8;
+            background-color:  #001f3f;
             color: white;
             text-align: center;
             padding: 10px;
@@ -82,19 +95,22 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="Research.html">Research & Policy</a>
-        
-        
-        <a href="Teaching.html">Teaching</a>
+    
     </nav>
 
     <main>
         <section id="teaching">
-            <h2>Teaching</h2>
-            <p> I have been a Teaching Assistant in:</p>
+            
+            <p>  University of Bristol</p>
             <ul class="custom-list">
-                <li> <strong>Mathematics for Economics</strong>, University of Bristol <br>[2020-21] [2021-22] [2022-23]</li> 
-                <li> <strong>Probability, Statistics and Econometrics</strong>, University of Bristol  <br>[2019-20] [2020-21] [2021-22] [2022-23]</li> 
-                <li> <strong>Macroeconomics</strong>, University of Salerno  <br>[2018-19]</li>
+                <li> <strong><span style="color: rgb(6, 245, 129);">Mathematics for Economics</span></strong> <em>(Undergraduate)</em><br> </li> 
+                <li> <strong><span style="color: rgb(6, 245, 129);">Probability, Statistics and Econometrics</span></strong> <em>(Undergraduate)</em><br></li> 
+        
+            </ul>
+            <p>  University of Salerno</p>
+            <ul class="custom-list">
+                
+                <li> <strong><span style="color: rgb(6, 245, 129);">Macroeconomics</span></strong><em> (Undergraduate)</em><br> </li>
             </ul>
         </section>
     </main>
