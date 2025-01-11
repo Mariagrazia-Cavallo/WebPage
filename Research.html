@@ -11,35 +11,36 @@
         }
 
         body {
+            font-size: 16px;
             font-family: 'Fontin', Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: white;
+            background-color:#001f3f;
+            color: white; 
+            line-height: 1.8;
         }
-
+        a {
+            color: rgb(255, 0, 162);
+        }
+        
         header, footer {
-            background-color: #5777f6e8;
+            background-color: #001f3f;
             color: white;
             text-align: center;
             padding: 1em 0;
         }
 
-        header h1 {
-            padding: 10px;
-            margin: 10px 0;
-            line-height: 1.2;
-        }
         nav {
-            background-color: #333;
+            text-align: center;
+            background-color:  #001f3f;
             overflow: hidden;
         }
-        
 
         nav a {
-            float: left;
+            float: center;
             display: block;
             color: white;
             text-align: center;
@@ -53,61 +54,73 @@
         }
 
         main {
+            flex: 1;
             padding: 20px;
+            background-color:#001f3f;
+            
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            width: 100%;
             max-width: 1200px;
-            margin: auto;
+            gap: 30px;
+        }
+
+        .profile-section {
+            text-align: left;
+            flex: 1 1 300px;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .cv-email-container {
+            margin-top: 20px;
+        }
+
+        .about-content {
+            flex: 2 1 600px;
+            text-align: justify;
         }
 
         h1, h2, h3 {
-            color: black;
-            margin: 0;
+            color: white
         }
 
-        .publication-list, .custom-list {
-            list-style-type: none;
-            padding: 0;
-            font-size: 15px;
+        .footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
         }
 
-        .publication-list li, .custom-list li {
-            margin-bottom: 20px;
-            font-size: 15px;
+        .paper-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-top: 20px;
         }
-
-        .publication-list a, .custom-list a {
-            color: #004080;
-            text-decoration: none;
-        }
-
-        .publication-list a:hover, .custom-list a:hover {
-            text-decoration: underline;
-        }
-
         .abstract-content {
             padding: 10px;
-            border: 1px solid #ddd;
-            background-color: #cee4f8;
+            border: 1px solid rgb(6, 245, 129);
+            background-color: #7ebcf6;
             color: black;
             margin-top: 10px;
             border-radius: 5px;
             text-align: justify;
         }
 
-        .image-container {
-            display: flex; /* Ensures images are aligned side by side */
-            justify-content: center; /* Center images in the container */
-            gap: 40px; /* Adjust the space between images */
-        }
-
-        .paper-image {
-            width: 100%; /* Allow images to take full width of the container */
-            max-width: 250px; /* Set maximum width for larger screens */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Prevent images from being cropped */
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        
         /* On mobile screens (480px or smaller) */
         @media (max-width: 480px) {
             .image-container {
@@ -193,17 +206,16 @@
     </header>
     <nav>
         <a href="index.html">Home</a>
-        <a href="Research.html">Research & Policy</a>
         <a href="Teaching.html">Teaching</a>
     </nav>
 
     <main>
         <section id="research">
-            <h2>Working Papers</h2>
+            <h2><span style="color: rgb(6, 245, 129);">Working Papers</span></h2>
             <ul class="custom-list">
-                <li><strong>“When Geography Shapes Preferences: Redesigning Teacher Assignment in Italy”</strong>, with 
-                    <a href="https://www.battaldogan.com/" target="_blank">Battal Dogan</a>. 
-                    <a href="ssrn-version.pdf" target="_blank">[PDF]</a> 
+                <li>“When Geography Shapes Preferences: Redesigning Teacher Assignment in Italy”, with 
+                    <a href="https://www.battaldogan.com/" target="_blank"><span style="color: rgb(255, 0, 162);">Battal Dogan</span></a>. 
+                    <a href="WGSP.pdf" target="_blank">[PDF]</a> 
                     <br>
                     <button onclick="toggleText('abstract1')">+ Abstract</button>
                     <div id="abstract1" class="hiddenText">
@@ -221,19 +233,18 @@
                     </div>
                     <ul>
                          <br>
-                        <li><span style="color: blue;">“Best Paper Award” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
-                        <li><span style="color: blue;">“Exemplary Track Paper Award in Applied Modeling” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
-                        <li>Proceedings of the 25th ACM Conference on Economics and Computation (2024)</li>
+                        <li><span style="color: #5777f6e8;">“Best Paper Award” and “Exemplary Track Paper Award in Applied Modeling” at the 25th ACM Conference on Economics and Computation (2024)</span></li>
+                        <li><span style="color: #5777f6e8;">Proceedings of the 25th ACM Conference on Economics and Computation (2024)</span> <a href="https://dl.acm.org/doi/10.1145/3670865.3673643" target="_blank"><span style="color: rgb(255, 0, 162);">[PDF]</span></a></li>
                     </ul>
                 
                     </div>
                 </li>
             </ul>
 
-            <h2>Work in Progress</h2>
+            <h2><span style="color: rgb(6, 245, 129);">Work in Progress</span></h2>
             <ul class="custom-list">
 
-                <li><strong>“Retention Policies in Teacher Reassignment”.</strong> 
+                <li>“Retention Policies in Teacher Reassignment”. 
      <br>
                     <button onclick="toggleText('abstract4')">+ Abstract</button>
                     <div id="abstract4" class="hiddenText">
@@ -254,18 +265,18 @@
 
 
                 
-                <li><strong>“Modifying school choice for more equitable outcomes in England”</strong> with 
-                <a href="https://simonburgesseconomics.co.uk/" target="_blank">Simon Burgess</a>, 
+                <li>“Modifying school choice for more equitable outcomes in England” with 
+                <a href="https://simonburgesseconomics.co.uk/" target="_blank"><span style="color: rgb(255, 0, 162);">Simon Burgess</span></a>, 
                 <a href="https://ecantill.ulb.be/" target="_blank">Estelle Cantillon</a>, and
                 <a href="https://sites.google.com/view/ellengreaves/" target="_blank">Ellen Greaves</a>.</li>
-                <li><strong>“Age at School Entry: What Do We Know So Far?”</strong>, with 
+                <li>“Age at School Entry: What Do We Know So Far?”, with 
                     <a href="https://www.utsc.utoronto.ca/people/dhuey/" target="_blank">Elizabeth Dhuey</a>, 
                     <a href="https://sites.google.com/site/lucafumarco/home" target="_blank">Luca Fumarco</a>, 
                     <a href="https://be.linkedin.com/in/levihalewyck" target="_blank">Levi Halewyck</a>, 
                     <a href="https://sites.google.com/view/simontermeulen/home" target="_blank">Simon ter Meulen</a>. 
                 </li>
                 
-                <li><strong>“<em>Choosing in the Dark</em>. Information Revelation and Teacher Distribution”.</strong> 
+                <li>“<em>Choosing in the Dark</em>. Information Revelation and Teacher Distribution”.
                     <br>
                     <button onclick="toggleText('abstract14')">+ Abstract</button>
                     <div id="abstract14" class="hiddenText">
@@ -285,14 +296,14 @@
                     </div>
                 </li>
                 
-                <li><strong>“The Italian North-South Divide. Market Design for Balanced Teacher Reassignment”.</strong> </li>
-                <li><strong>“Solving High-Dimensional Portfolio Choice Models in School Choice”.</strong></li>
+                <li>“The Italian North-South Divide. Market Design for Balanced Teacher Reassignment”.</li>
+                <li>“Solving High-Dimensional Portfolio Choice Models in School Choice”.</li>
                 
             </ul>
 
-            <h2>Policy Writing</h2>
+            <h2><span style="color: rgb(6, 245, 129);">Policy Writing</span></h2>
             <ul class="custom-list">
-                <li><strong>“School Admissions in England: The Rules Schools Choose on Which Pupils to Admit” (2023)</strong>, with 
+                <li>“School Admissions in England: The Rules Schools Choose on Which Pupils to Admit” (2023), with 
                     <a href="https://simonburgesseconomics.co.uk/" target="_blank">Simon Burgess</a>, 
                     <a href="https://ecantill.ulb.be/" target="_blank">Estelle Cantillon</a>, 
                     <a href="https://sites.google.com/view/ellengreaves/" target="_blank">Ellen Greaves</a>, 
@@ -318,21 +329,14 @@
                             multiple school types and diverse admissions arrangements, parents in some areas
                             lack the required information to make informed school choices.
                         </div>
-                    </div>
-                       <!--    <div class="image-container">
-                        <img src="5. Map of England_p_oversubscribed.png" alt="Paper Image" class="paper-image"> 
-                        <img src="5. combine_priorities_2.png" alt="Paper Image" class="paper-image"> 
-                        <img src="5. combine_priorities_3.png" alt="Paper Image" class="paper-image"> -->
-                    </div>
-                    <!-- <span style="color: blue;">In the news: </span></h2> <a href="https://economics.blogs.bristol.ac.uk/2023/03/01/who-gets-in-where-you-live-matters-for-where-you-go-to-school/" target="_blank">Economics Blog</a> -->
                 </li>
             </ul>
 
-            <h2>Publications</h2>
+            <h2><span style="color: rgb(6, 245, 129);">Publications</span></h2>
             <ul class="custom-list">
-                <li><strong>“Lost in Translation: Reading and Math Performance of Second-Generation Immigrant Children in Italy”</strong>, 
-                    with <span style="color: #004080;">Giuseppe Russo</span>, 
-                    Journal of Human Capital, <em>Accepted.</em> 
+                <li>“Lost in Translation: Reading and Math Performance of Second-Generation Immigrant Children in Italy”, 
+                    with <a href="https://sites.google.com/view/giuseppe-russo/home" target="_blank"><span style="color: rgb(255, 0, 162);">Giuseppe Russo</span></a>, 
+                   <span style="color:#5777f6e8;">Journal of Human Capital</span>, <em> <a href="https://www.journals.uchicago.edu/doi/10.1086/734386" target="_blank">(Accepted)</a>.</em> 
                     <a href="LIT.pdf" target="_blank">[PDF (WP Version)]</a>
                     <br>
                     <button onclick="toggleText('abstract3')">+ Abstract</button>
